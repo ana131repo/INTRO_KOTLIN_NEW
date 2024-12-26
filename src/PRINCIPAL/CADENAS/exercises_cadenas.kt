@@ -19,3 +19,30 @@ fun concatenar(texto1: String, texto2: String): String {
     return texto1 + texto2
 
 }
+
+/*Ejercicio 2
+  Crea una función que dada una frase sustituyeya un carácter por otro
+
+          Ejemplo:
+  "esta frase es de ejemplo" letra a buscar "a" letra a sustituir "i" -> "esti frise es de ejemplo"*/
+
+fun exercise2() {
+    println("Sustituir en una frase un caracter")
+    println("Escribe una frase")
+    val texto = readlnOrNull() ?: ""
+    println("Escribe el caracter que quieres sustituir")
+    val sustituir = readlnOrNull() ?: ""
+    println("Escribe el caracter que quieres insertar ")
+    val insertar = readlnOrNull() ?: ""
+    if (texto.isEmpty()) {
+        println("Este texto está vacio")
+    } else {
+        val show = sustituirChar(texto, sustituir, insertar)
+        println(show)
+    }
+
+}
+
+fun sustituirChar(texto: String, charSustituir: String, charInsertar: String): String {
+    return texto.replace(charSustituir, charInsertar)
+}
