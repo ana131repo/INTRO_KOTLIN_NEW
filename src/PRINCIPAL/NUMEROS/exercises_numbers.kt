@@ -39,3 +39,30 @@ fun multiplicar(num1: Int, num2: Int): Int {
     return num1 * num2
 
 }
+
+/*Crea una función que dado 2 números enteros (dividendo y divisor) los divida y devuelva
+el resultado solo si el divisor no es 0 en caso contrario devuelve nulo
+Ejemplo:
+5/0 -> null
+5/2 -> 2,5*/
+
+fun exercise3() {
+    var resultado: Float
+    println("Didivir dos números enteros")
+    println("Primer número")
+    val dividendo = readlnOrNull()?.toIntOrNull() ?: 0
+    println("Segundo número")
+    val divisor = readlnOrNull()?.toIntOrNull() ?: 0
+    if (divisor == 0) {
+        println("null")
+    } else {
+        resultado = dividisionResultadoFloat(dividendo, divisor)
+        println(resultado)
+    }
+}
+
+fun dividisionResultadoFloat(num1: Int, num2: Int): Float {
+    return num1.toFloat() / num2.toFloat()
+
+}
+
