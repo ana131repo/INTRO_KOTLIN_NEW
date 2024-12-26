@@ -134,3 +134,28 @@ fun necesitanAyuda(conjunto: MutableList<Aula>) {
     }
 
 }
+
+/*Ejercicio 5
+  Obten un array nuevo de alumnos suspendidos de todas las clases*/
+
+fun exercise5() {
+    println("Listado de los alumnos suspensos")
+    val alumnoSuspenso = listadoSuspensos(conjunto)
+    for (i in alumnoSuspenso){
+        println(i.nombre)
+    }
+
+}
+
+fun listadoSuspensos(conjunto: MutableList<Aula>): List<Alumno> {
+    val listado = mutableListOf<Alumno>()
+    conjunto.forEach {
+        it.alumnos.forEach { alumno ->
+            if (alumno.isProgresing)
+                listado.add(alumno)
+
+        }
+    }
+    return listado
+}
+
