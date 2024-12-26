@@ -66,3 +66,31 @@ fun dividisionResultadoFloat(num1: Int, num2: Int): Float {
 
 }
 
+/*Ejercicio 4
+Crea una función que dado 2 números enteros los divida y devuelva la parte entera de la división. Si el divisor es 0 devuelve nulo
+Ejemplo:
+5/2 -> 2
+   */
+
+fun exercise4() {
+    val resultado: Int
+    println("Didivir dos números enteros")
+    println("Primer número")
+    val dividendo = readlnOrNull()?.toIntOrNull() ?: 0
+    println("Segundo número")
+    val divisor = readlnOrNull()?.toIntOrNull() ?: 0
+    if (divisor == 0) {
+        println("null")
+    } else {
+        resultado = dividisionResultadoInt(dividendo, divisor)
+        println(resultado)
+    }
+
+}
+
+fun dividisionResultadoInt(num1: Int, num2: Int): Int {
+    return num1 / num2
+
+
+}
+
