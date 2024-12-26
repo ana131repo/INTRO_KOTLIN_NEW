@@ -106,4 +106,26 @@ fun duplicar(texto: String): String {
     return dosPrimeras.repeat(2)
 }
 
+/*Ejercicio 5
+  Crea una función que dada una frase comprueba que los 2 primeros caracteres son iguales que los 2 últimos
 
+  Ejemplo:
+  "este es el texto" -> false*/
+
+fun exercise5() {
+    println("Comprobar en un texto que los 2 últimos chars son iguales que los dos últimos")
+    println("Escribe un texto")
+    val texto = readlnOrNull() ?: ""
+    if (texto.isEmpty()) {
+        println("Este texto está vacio")
+    } else {
+        println(comprobar(texto))
+    }
+}
+
+
+fun comprobar(texto: String): Boolean {
+    val firstChar = texto.substring(0, 2)
+    val endChar = texto.substring(texto.length - 2, texto.length)
+    return firstChar == endChar
+}
