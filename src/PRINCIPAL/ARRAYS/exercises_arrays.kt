@@ -134,3 +134,30 @@ fun anadirElemento(miLista: ArrayList<String>, anadir: String): ArrayList<String
     return miLista
 
 }
+
+/* Ejercicio 6
+    Crea una función que dado un conjunto de Int devuelva el primer número entre 1 y 1000000 que no se encuentre dentro del array
+
+            Ejemplo:
+    [1,4,3,5,2] devuelve 6
+    [1,6,3,5,2] devuelve 4*/
+
+
+fun exercise6() {
+    val conjunto1 = listOf(1, 4, 3, 5, 2)
+    val conjunto2 = listOf(1, 6, 3, 5, 2)
+    println("En este conjunto $conjunto1 es el número  ${encontrar(conjunto1)}")
+    println("En este conjunto $conjunto2 es el número ${encontrar(conjunto2)}")
+}
+
+fun encontrar(conjunto: List<Int>): Int {
+    val max = 1000000
+    for (i in 1..max) {
+        if (!conjunto.contains(i)) {
+            return i
+        }
+    }
+    error("todos los números están presentes")
+}
+
+
