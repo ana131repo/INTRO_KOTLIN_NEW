@@ -22,14 +22,14 @@ fun inicioNumeros(){
         menuNumbers()
         opcion_usuario_numeros= readlnOrNull()?.toIntOrNull()?:0
         when(opcion_usuario_numeros){
-            1-> println()//exercise1()
-            2-> println()//exercise2()
-            3-> println()//exercise3()
-            4-> println()//exercise4()
-            5-> println()//exercise5()
-            6-> println()// exercise6()
-            7-> println() //exercise7()
-            8-> println()// exercise8()
+            1-> exercise1()
+            2-> exercise2()
+            3-> exercise3()
+            4-> exercise4()
+            5-> exercise5()
+            6-> exercise6()
+            7-> exercise7()
+            8-> exercise8()
             9->{
                 println("Saliendo de Ejercicios de Números")
                 isOn_numeros=false
