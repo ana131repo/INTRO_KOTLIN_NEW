@@ -33,3 +33,24 @@ fun insertarInArray(
     val newArray = newConjunto.toTypedArray()
     return newArray
 }
+
+
+/*Ejercicio 2
+   Crea una función que dado un conjunto de enteros devuelva si existe un número dentro de él
+
+   Ejemplo:
+   [1,2,3,4,5,6] existe 3 -> true*/
+
+fun exercise2() {
+    println("Comprobar si existe un número dentro de un conjunto de números")
+    val conjunto = listOf(1, 2, 3, 4, 5, 6)
+    println("Conjunto de enteros $conjunto")
+    println("Escribe un número ")
+    val numberUsuario = readlnOrNull()?.toIntOrNull() ?: 0
+    println(isExiste(conjunto, numberUsuario))
+
+}
+
+fun isExiste(lista: List<Int>, numero: Int): Boolean {
+    return lista.contains(numero)
+}
