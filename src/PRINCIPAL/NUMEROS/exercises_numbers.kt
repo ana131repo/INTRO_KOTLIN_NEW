@@ -118,5 +118,32 @@ fun porcentaje(jugados: Int, ganados: Int): Int {
 
 }
 
+/*Ejercicio 6
+Crea una función que dados 2 números devuelva el de mayor valor
+Ejemplo:
+4 y 7 -> 7
+  */
+
+fun exercise6() {
+    println("Escribir dos números y devolver el mayor")
+    println("Escribe un número")
+    val num1 = readlnOrNull()?.toIntOrNull() ?: 0
+    println("Escribe un número")
+    val num2 = readlnOrNull()?.toIntOrNull() ?: 0
+    val resultado = valorMayor(num1, num2)
+    println("El numero mayor es $resultado")
+
+
+}
+
+fun valorMayor(num1: Int, num2: Int): Int {
+    return if (num1 > num2) {
+        num1
+    } else {
+        num2
+    }
+
+}
+
 
 
