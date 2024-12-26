@@ -54,3 +54,29 @@ fun exercise2() {
 fun isExiste(lista: List<Int>, numero: Int): Boolean {
     return lista.contains(numero)
 }
+
+/*Ejercicio 3
+Crea una función que dado un conjunto de enteros devuelva el número de veces que se repite un número dado
+
+Ejemplo:
+[1,2,3,4,5,6] número 3 -> 1*/
+
+fun exercise3() {
+    println("Conocer el numero de veces que se repite un dato(número entero) en un conjunto")
+    val conjunto = listOf(1, 2, 3, 4, 5, 6, 7, 7, 6, 53, 2, 7)
+    println("Conjunto de datos: $conjunto")
+    println("Escribe el dato a comprobar")
+    val dato = readlnOrNull()?.toIntOrNull() ?: -0
+    println("El $dato se repite ${repeat(conjunto, dato)} veces ")
+
+}
+
+fun repeat(lista: List<Int>, dato: Int): Int {
+    var contador = 0
+
+    lista.let {
+        it.forEach { element -> if (element == dato) contador++ }
+    }
+
+    return contador
+}
