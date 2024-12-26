@@ -109,3 +109,28 @@ fun ordenar(conjunto: ArrayList<Int>): ArrayList<Int> {
     }
     return conjunto
 }
+
+/*Ejercicio 5
+   Crea una función que dado un conjunto de String añada un nuevo elemento que se le pase y devuelva el nuevo array
+
+           Ejemplo:
+   ["aa","bb","cc","dd"] "ee"-> ["aa","bb","cc","dd","ee"]*/
+
+fun exercise5() {
+    println("Añadir un nuevo elemento a un conjunto")
+    val conjunto = arrayListOf("aa", "bb", "cc", "dd")
+    println("Conjunto de  datos $conjunto")
+    println("Escribir el elemento a añadir")
+    val elemento = readlnOrNull() ?: ""
+    println("Nuevo conjunto: ${anadirElemento(conjunto, elemento)}")
+
+
+}
+
+fun anadirElemento(miLista: ArrayList<String>, anadir: String): ArrayList<String> {
+    miLista.toMutableList()
+    miLista.add(anadir)
+    miLista.toTypedArray()
+    return miLista
+
+}
