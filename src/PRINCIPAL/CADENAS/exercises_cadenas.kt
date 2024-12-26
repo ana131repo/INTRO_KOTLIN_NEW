@@ -87,4 +87,23 @@ fun deleteChar(texto: String, char: String): String {
 
 }
 
+/*Ejercicio 4
+  Crea una función que dado un texto devuelva 2 veces las 2 primeras letras. Ejemplo "swift" devuelve "swsw"
+
+  Ejemplo:
+  "este es el texto" -> "eses"*/
+
+fun exercise4() {
+    println("Devolver 2 veces las 2 primeras letras de un texto")
+    println("Escribe un texto")
+    val texto = readlnOrNull() ?: ""
+    println(duplicar(texto))
+
+}
+
+fun duplicar(texto: String): String {
+    var dosPrimeras = texto.substring(0, 2)
+    return dosPrimeras.repeat(2)
+}
+
 
