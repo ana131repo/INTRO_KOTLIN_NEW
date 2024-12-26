@@ -19,12 +19,12 @@ fun inicioArrays(){
         menuArrays()
         opcion_usuario_arrays = readlnOrNull()?.toIntOrNull()?:0
         when(opcion_usuario_arrays){
-            1-> println()// exercise1()
-            2-> println()//exercise2()
-            3-> println()// exercise3()
-            4-> println()// exercise4()
-            5-> println()// exercise5()
-            6-> println()// exercise6()
+            1-> exercise1()
+            2-> exercise2()
+            3-> exercise3()
+            4-> exercise4()
+            5-> exercise5()
+            6-> exercise6()
             7->{
                 println("Saliendo de ejercicios de Arrays")
                 isOn_Arrays = false
