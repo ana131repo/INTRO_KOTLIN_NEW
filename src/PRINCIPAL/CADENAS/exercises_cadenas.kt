@@ -46,3 +46,45 @@ fun exercise2() {
 fun sustituirChar(texto: String, charSustituir: String, charInsertar: String): String {
     return texto.replace(charSustituir, charInsertar)
 }
+
+/* Ejercicio 3
+   Crea una función que dado una frase borra el carácter que se le pasa si la contiene al principio o al final de la frase
+
+   Ejemplo:
+   "esta frase es de ejemplo" caracter "o" -> "esta frase es de ejempl"*/
+
+fun exercise3() {
+    println("Eliminar un caracter al principio o al final en un texto")
+    println("Escribe un frase")
+    val texto = readlnOrNull() ?: ""
+    println("Escribe el character a eliminar, default 'a'")
+    var char = readlnOrNull() ?: "a"
+    if (texto.isEmpty()) {
+        println("Este texto está vácio")
+    } else {
+        val show = deleteChar(texto, char)
+        println(show)
+    }
+
+
+}
+
+fun deleteChar(texto: String, char: String): String {
+    var cleanTexto = texto.trim()
+    //var textoSalida = cleanTexto.startsWith(char)
+    var newTexto: String = ""
+    if (cleanTexto.startsWith(char)) {
+        cleanTexto = cleanTexto.substring(1, cleanTexto.length)
+    } else {
+        cleanTexto
+    }
+    if (cleanTexto.endsWith(char)) {
+        cleanTexto = cleanTexto.substring(0, cleanTexto.length - 1)
+    } else {
+        cleanTexto
+    }
+    return cleanTexto
+
+}
+
+
