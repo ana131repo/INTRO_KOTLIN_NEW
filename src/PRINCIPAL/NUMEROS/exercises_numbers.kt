@@ -94,3 +94,29 @@ fun dividisionResultadoInt(num1: Int, num2: Int): Int {
 
 }
 
+/* Ejercicio 5
+Crea una función que calcule el porcentaje de victorias de un equipo de futbol según los partidos que ha jugado y los que ha ganado
+
+Ejemplo:
+jugados 10 partidos ganados 9 -> 90%
+    */
+
+fun exercise5() {
+    println("Calcular el porcentaje de partidos ganados")
+    println("Ingresa los partidos jugados")
+    val jugados = readlnOrNull()?.toIntOrNull() ?: 0
+    println("Ingresa los partidos ganados")
+    val ganados = readlnOrNull()?.toIntOrNull() ?: 0
+    val resultado = porcentaje(jugados, ganados)
+    println("jugados $jugados partidos jugados y  ganados $ganados --> $resultado%")
+
+}
+
+fun porcentaje(jugados: Int, ganados: Int): Int {
+    return ((ganados * 100) / jugados)
+
+
+}
+
+
+
