@@ -80,3 +80,32 @@ fun repeat(lista: List<Int>, dato: Int): Int {
 
     return contador
 }
+
+/* Crea una función que dado un conjunto de enteros los ordene de mayor a menor y devuelva el array resultante. NO SE PUEDE USAR SORT
+
+             Ejemplo:
+     [6,2,3,4,5,1] -> [1,2,3,4,5,6]*/
+
+fun exercise4() {
+    println("Ordenar un conjunto de números enteros")
+    val conjunto = arrayListOf(6, 5, 4, 3, 2, 1, 7, 9)
+    println("Conjunto de datos sin ordenar: ${conjunto}")
+    println("Conjunto ordenado ${ordenar(conjunto)}")
+
+}
+
+fun ordenar(conjunto: ArrayList<Int>): ArrayList<Int> {
+    var on = true
+    while (on) {
+        on = false
+        for (i in 0 until conjunto.size - 1) {
+            if (conjunto[i] < conjunto[i + 1]) {
+                val temp = conjunto[i]
+                conjunto[i] = conjunto[i + 1]
+                conjunto[i + 1] = temp
+                on = true
+            }
+        }
+    }
+    return conjunto
+}
