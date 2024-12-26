@@ -115,3 +115,22 @@ fun alumnosSuspensos(conjunto: MutableList<Aula>) {
 
     }
 }
+
+/*Ejercicio 4
+   Añade un atributo nuevo a la clase que sea needHelp que sera true cuando isApproved e isProgressing sean false.
+   Este atributo se debe autocalcular al iniciar la clase o cambiar el valor de isApproved o isProgressing a false e
+   imprime todos los alumnos suspendidos de cada clase que necesitan ayuda
+    */
+
+
+fun exercise4() {
+    println("Mostrar los alumnos que necesitan ayuda ")
+    necesitanAyuda(conjunto)
+}
+
+fun necesitanAyuda(conjunto: MutableList<Aula>) {
+    conjunto.forEach {
+        it.alumnos.forEach { alumno -> if (alumno.needHelp) println(alumno.nombre) }
+    }
+
+}
