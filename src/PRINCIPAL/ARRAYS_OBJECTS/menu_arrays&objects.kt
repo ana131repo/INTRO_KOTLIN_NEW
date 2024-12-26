@@ -16,11 +16,11 @@ fun inicioArraysAndObjects(){
         menuArraysAndObjects()
         opcion_usuario_arraysAndObjects = readlnOrNull()?.toIntOrNull()?:0
         when(opcion_usuario_arraysAndObjects){
-            1-> println()// exercise1()
-            2-> println()// exercise2()
-            3-> println()// exercise3()
-            4-> println()// exercise4()
-            5-> println()// exercise5()
+            1-> exercise1()
+            2-> exercise2()
+            3-> exercise3()
+            4-> exercise4()
+            5-> exercise5()
             6->{
                 println("Saliendo de ejercicios de ArraysAndObjects")
                 isOn_ArraysAndObjects=false
