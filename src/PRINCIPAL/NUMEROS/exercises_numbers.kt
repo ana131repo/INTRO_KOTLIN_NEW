@@ -145,5 +145,28 @@ fun valorMayor(num1: Int, num2: Int): Int {
 
 }
 
+/*Ejercicio 7
+Calcula el volumen de una piscina dado el ancho, largo y la altura
+Ejemplo:
+ancho 4 largo 4 alto 3 -> 48
+   */
+
+fun exercise7(){
+    println("Calcular el volumen de una piscina (ancho*largo*alto")
+    println("Escribe el ancho")
+    val ancho = readlnOrNull()?.toIntOrNull() ?: 0
+    println("Escribe el largo")
+    val largo = readlnOrNull()?.toIntOrNull() ?: 0
+    println("Escribe el alto")
+    val alto = readlnOrNull()?.toIntOrNull() ?: 0
+    val resultado = volumen(ancho,largo,alto)
+    println("El volumen de la piscina es $resultado")
+
+}
+fun volumen(ancho:Int,largo:Int,alto:Int):Int{
+    return ancho*largo*alto
+
+}
+
 
 
