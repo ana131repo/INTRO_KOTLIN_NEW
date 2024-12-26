@@ -75,3 +75,26 @@ fun exercise1() {
 
 
 }
+
+/*ejercicio2
+    Imprime por consola todos los alumnos cuyo nombre contiene "a" en cada una de las clases*/
+
+fun exercise2() {
+    println("Mostrar todos los alumnos que contengan la A")
+    showExercise2(conjunto)
+}
+
+fun showExercise2(conjunto: MutableList<Aula>) {
+    conjunto.forEach {
+        if (it.alumnos.isEmpty()) println("No hay alumnos")
+        else {
+            (it.alumnos.forEach { alumno ->
+                if (alumno.nombre.contains("a", ignoreCase = true))
+                    println(alumno.nombre)
+            })
+        }
+
+    }
+
+}
+
