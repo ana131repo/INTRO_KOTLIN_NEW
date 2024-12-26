@@ -168,5 +168,37 @@ fun volumen(ancho:Int,largo:Int,alto:Int):Int{
 
 }
 
+/*Ejercicio 8
+Crea una función para calcular los 20 primeros números primos
+
+Ejemplo:
+los 5 primeros: 1, 2, 3, 5, 7
+     */
+
+fun exercise8(){
+    println("Calcular los 20 primero números primos")
+    var contador: Int = 0
+    var isPrimo: Boolean = true
+    var numero: Int = 2
+
+    while (contador < 20) {
+        isPrimo = true
+        for (divisor in 2..numero - 1) {
+            if (numero % divisor == 0) {
+                isPrimo = false
+                break
+            }
+        }
+        if (isPrimo) {
+            contador++
+            println("$contador primo $numero")
+        }
+
+        numero++
+
+    }
+}
+
+
 
 
