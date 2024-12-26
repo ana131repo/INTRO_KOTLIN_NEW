@@ -129,3 +129,24 @@ fun comprobar(texto: String): Boolean {
     val endChar = texto.substring(texto.length - 2, texto.length)
     return firstChar == endChar
 }
+
+/* Ejercicio 6
+  Comprueba que 2 textos son iguales independientemente de si son mayusculas o no
+
+  Ejemplo:
+  "Hola" "hola" -> true
+  "MAR", "SDW") -> false*/
+
+fun exercise6() {
+    println("Comprobar que dos textos son iguales, no importan si son mayúsculas o mínúsculas")
+    println("Escribe un texto")
+    val texto1 = readlnOrNull() ?: ""
+    println("Escribe otro texto")
+    val texto2 = readlnOrNull() ?: ""
+    println(isIguales(texto1, texto2))
+
+}
+
+fun isIguales(texto1: String, texto2: String): Boolean {
+    return texto1.equals(texto2, ignoreCase = true)
+}
