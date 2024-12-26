@@ -98,3 +98,20 @@ fun showExercise2(conjunto: MutableList<Aula>) {
 
 }
 
+/*Ejercicio 3
+ Añade un atributo nuevo a la clase que sea isApproved y otra que sea isProgressing e imprime todos los
+  alumnos suspendidos que no esten progresando de cada clase
+
+  */
+fun exercise3() {
+    println("Listado de alumnos suspensos")
+    alumnosSuspensos(conjunto)
+
+}
+
+fun alumnosSuspensos(conjunto: MutableList<Aula>) {
+    conjunto.forEach {
+        it.alumnos.forEach { alumno -> if (alumno.isProgresing) println(alumno.nombre) }
+
+    }
+}
