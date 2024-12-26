@@ -20,12 +20,12 @@ fun inicioCadenas() {
         menuCadenas()
         opcion_usuario_cadenas = readlnOrNull()?.toIntOrNull() ?: 0
         when (opcion_usuario_cadenas) {
-            1-> println()// exercise1()
-            2-> println()// exercise2()
-            3-> println()// exercise3()
-            4-> println()// exercise4()
-            5-> println()// exercise5()
-            6-> println()// exercise6()
+            1-> exercise1()
+            2-> exercise2()
+            3-> exercise3()
+            4-> exercise4()
+            5-> exercise5()
+            6-> exercise6()
             7-> {
                 println("Saliendo de ejercicios de Cadenas")
                 isOn_cadenas=false
